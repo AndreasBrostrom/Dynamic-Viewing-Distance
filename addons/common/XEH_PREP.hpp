@@ -1,9 +1,9 @@
-PREP(init);
-
-PREP(error);
 PREP(log);
 PREP(info);
 PREP(warning);
+PREP(error);
+
+PREP(init);
 
 PREP(allowUpdate);
 PREP(getAltitudeAircraft);

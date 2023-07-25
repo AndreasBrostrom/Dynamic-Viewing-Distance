@@ -77,28 +77,6 @@
     item = ##BARREL; \
 }
 
-#define MULT_OBJ_0(a)
-#define MULT_OBJ_1(a)  a
-#define MULT_OBJ_2(a)  a, a
-#define MULT_OBJ_3(a)  a, a, a
-#define MULT_OBJ_4(a)  a, a, a, a
-#define MULT_OBJ_5(a)  a, a, a, a, a
-#define MULT_OBJ_6(a)  a, a, a, a, a, a
-#define MULT_OBJ_7(a)  a, a, a, a, a, a, a
-#define MULT_OBJ_8(a)  a, a, a, a, a, a, a, a
-#define MULT_OBJ_9(a)  a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_10(a) a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_11(a) a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_12(a) a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_13(a) a, a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_14(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_15(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_16(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_17(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_18(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_19(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-#define MULT_OBJ_20(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)

@@ -1,7 +1,7 @@
 // COMPONENT should be defined in the script_component.hpp and included BEFORE this hpp
 
 #define MAINPREFIX z
-#define PREFIX cav
+#define PREFIX dvd
 
 #include "script_version.hpp"
 
@@ -13,7 +13,7 @@
 #define REQUIRED_CBA_VERSION {3,4,1}
 
 #ifdef COMPONENT_BEAUTIFIED
-    #define COMPONENT_NAME QUOTE(7th Cavalry Addon - COMPONENT_BEAUTIFIED)
+    #define COMPONENT_NAME QUOTE(Dynamic Viewing Distance System - COMPONENT_BEAUTIFIED)
 #else
     #define COMPONENT_NAME QUOTE(PREFIX - COMPONENT)
 #endif

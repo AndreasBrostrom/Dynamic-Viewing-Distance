@@ -4,14 +4,26 @@ if ( ![bool](Test-Path -Path "P:")) {
 }
 
 # Set version
-$tagVersion = git describe --tags --abbrev=0
-Write-Host "Build version $tagVersion"
+if ( !($args) ) {
+     $tagVersion = git describe --tags --abbrev=0
+} else {
+     $tagVersion = $args
+}
+if ( $tagVersion -ne 'DevBuild' ) {
+     Write-Host "Build version $tagVersion"
+     $version = $tagVersion.Split(".")
+     $versionMajor = $version[0]
+     $versionMinor = $version[1]
+     $versionPatch = $version[2]
+     $versionBuild = 0
 
-$version = $tagVersion.Split(".")
-$versionMajor = $version[0]
-$versionMinor = $version[1]
-$versionPatch = $version[2]
-$versionBuild = 0
+     sed -e "s/DevBuild/$tagVersion/g" "../mod.cpp" | Set-Content "../mod.cpp"
+
+     Set-Content -Path '../addons/main/script_version.hpp' -Value "#define MAJOR $versionMajor
+     #define MINOR $versionMinor
+     #define PATCHLVL $versionPatch
+     #define BUILD $versionBuild"
+}
 
 sed -e "s/DevBuild/$tagVersion/g" "../mod.cpp" | Set-Content "../mod.cpp"
 

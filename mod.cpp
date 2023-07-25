@@ -1,0 +1,12 @@
+name = "Dynamic Viewing Distance System 0.0.0";
+picture = "";
+actionName = "GitHub";
+action = "";
+description = "Dynamic Viewing Distance System - Version 0.0.0";
+logo = "";
+logoOver = "";
+tooltip = "Dynamic Viewing Distance System";
+tooltipOwned = "Dynamic Viewing Distance System Owned";
+overview = "Dynamic Viewing Distance System...";
+author = "Dynamic Viewing Distance System Team";
+overviewPicture = "";

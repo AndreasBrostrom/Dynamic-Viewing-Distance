@@ -41,9 +41,7 @@ if (_objDist < _minObjDist) then {_objDist = _minObjDist};
 if (_dist > _maxDist) then {_dist = _maxDist};
 if (_objDist > _maxObjDist) then {_objDist = _maxObjDist};
 
-#ifdef DEBUG_MODE
-    hintSilent str ["Man", _dist, _objDist, [_bonusView, _penaltyView, _bonusView - _penaltyView]];
-#endif
+hintSilent str ["Man", _dist, _objDist, [_bonusView, _penaltyView, _bonusView - _penaltyView]];
 
 EGVAR(NEW,DISTANCEVIEW) = _dist;
 EGVAR(NEW,DISTANCEOBJECTS) = _objDist;
