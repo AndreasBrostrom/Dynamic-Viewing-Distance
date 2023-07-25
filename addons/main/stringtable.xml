@@ -1,13 +1,13 @@
-<Project name="dvd">
-    <Package name="main">
-        <Key ID="str_dvd_main_display">
+<Project name="DVD">
+    <Package name="Main">
+        <Key ID="str_DVD_Main_Display">
             <English>Dynamic Viewing Distance System</English>
         </Key>
-        <Key ID="str_dvd_main_cavmodteam">
-            <English>7th Cavalry S3 Mod Team</English>
+        <Key ID="str_DVD_Main_Team">
+            <English>Dynamic Viewing Distance System Mod Team</English>
         </Key>
-        <Key ID="str_dvd_main_url">
-            <English>http://7cav.us</English>
+        <Key ID="str_DVD_Main_Url">
+            <English>https://github.com/AndreasBrostrom/Dynamic-Viewing-Distance/</English>
         </Key>
     </Package>
 </Project>

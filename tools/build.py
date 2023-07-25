@@ -6,7 +6,7 @@ import subprocess
 
 ######## GLOBALS #########
 MAINPREFIX = "z"
-PREFIX = "cav_"
+PREFIX = "dvd_"
 ##########################
 
 def tryHemttBuild(projectpath):

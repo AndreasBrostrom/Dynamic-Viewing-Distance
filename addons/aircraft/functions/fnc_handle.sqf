@@ -7,31 +7,21 @@ private _maxDist    = EGVAR(MAX,DISTANCEVIEW);
 private _maxObjDist = EGVAR(MAX,DISTANCEOBJECTS);
 
 //Altetude
-private _altitude = call FUNC(getAltitudeMan);
+private _altitude = call FUNC(getAltitude);
 
 // Scope
-private _zoom = call FUNC(getOpticsRifle);
+private _scope = if !(cameraView == "GUNNER") then { call FUNC(getOptics)} else { 0 };
 
-// Clearing
-private _clearing = call FUNC(getClearTerrain);
-
-private _bonusView = _altitude + _zoom + _clearing;
-
-
-// City
-private _city = call FUNC(getCityTerrain);
-
-// Forest
-private _forest = call FUNC(getForestTerrain);
-
-// Units and battles
-private _troops = call FUNC(getTroops);
-
-private _penaltyView = _city + _forest + _troops;
-
+private _bonusView = _altitude + _scope;
+private _penaltyView = 0;
 
 private _dist = _bonusView - _penaltyView;
-private _objDist = _dist / 4;
+
+private _objDist = if (cameraView == "GUNNER") then {
+    (_dist / 2) + call FUNC(getOptics);
+} else {
+    _dist / 3
+};
 
 _dist = round _dist;
 _objDist = round _objDist;
@@ -41,7 +31,7 @@ if (_objDist < _minObjDist) then {_objDist = _minObjDist};
 if (_dist > _maxDist) then {_dist = _maxDist};
 if (_objDist > _maxObjDist) then {_objDist = _maxObjDist};
 
-hintSilent str ["Man", _dist, _objDist, [_bonusView, _penaltyView, _bonusView - _penaltyView]];
+hintSilent str ["Aircraft", _dist, _objDist, [_bonusView, _penaltyView, _bonusView - _penaltyView]];
 
 EGVAR(NEW,DISTANCEVIEW) = _dist;
 EGVAR(NEW,DISTANCEOBJECTS) = _objDist;

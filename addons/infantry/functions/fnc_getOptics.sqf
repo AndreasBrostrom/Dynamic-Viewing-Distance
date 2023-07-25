@@ -1,7 +1,7 @@
 #include "script_component.hpp";
 
 private _zoom = call CBA_fnc_getFov select 1;
-private _troops = call FUNC(getTroops);
+private _troops = call EFUNC(common,getTroops);
 
 private _return = if (_troops > 2500) then {
     if (cameraView == "GUNNER") then {

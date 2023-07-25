@@ -6,7 +6,7 @@ private _objDist = EGVAR(NEW,DISTANCEOBJECTS);
 setViewDistance _dist; 
 setObjectViewDistance [_objDist, 100]; 
 
-[formatText["ViewDistance %1, Object %2", _dist, _objDist], "Change", true] call FUNC(info);
+[format["ViewDistance %1, Object %2", _dist, _objDist], true, "INFO Change"] call EFUNC(log);
 
 EGVAR(OLD,DISTANCEVIEW)    = _dist;
 EGVAR(OLD,DISTANCEOBJECTS) = _objDist;

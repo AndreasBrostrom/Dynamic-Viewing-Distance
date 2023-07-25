@@ -1,4 +1,10 @@
-<Project name="dvd">
-    <Package name="common">
+<Project name="DVD">
+    <Package name="Common">
+        <Key ID="STR_DVD_Common_Category">
+            <English>Dynamic Viewing Distance</English>
+        </Key>
+        <Key ID="STR_DVD_Common_DebugMode">
+            <English>Debug mode</English>
+        </Key>
     </Package>
 </Project>

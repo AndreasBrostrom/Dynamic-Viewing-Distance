@@ -7,19 +7,21 @@
  * 0: message <STRING>
  * 1: componant <STRING>
  * 2: showInChat <BOOL>
+ * 3: sendToServer <BOOL>
  *
  * Example:
  * ["Something is wrong here."] call FUNC(warning)
- * [formatText["%1 is a player.", player]] call FUNC(warning)
+ * [format["%1 is a player.", player]] call FUNC(warning)
  *
  */
 
 params [
     ["_message", ""],
     ["_componant", "", [""]],
-    ["_showInChat", false, [false]]
+    ["_showInChat", false, [false]],
+    ["_sendToServer", false, [false]]
 ];
 
 private _type = "WARNING";
 
-[_message, _componant, _showInChat, _type] call FUNC(log);
+[_message, _componant, _showInChat, _sendToServer, _type] call FUNC(log);
