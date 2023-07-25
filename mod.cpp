@@ -1,8 +1,8 @@
-name = "Dynamic Viewing Distance System 0.0.0";
+name = "Dynamic Viewing Distance System DevBuild";
 picture = "";
 actionName = "GitHub";
 action = "";
-description = "Dynamic Viewing Distance System - Version 0.0.0";
+description = "Dynamic Viewing Distance System - Version DevBuild";
 logo = "";
 logoOver = "";
 tooltip = "Dynamic Viewing Distance System";

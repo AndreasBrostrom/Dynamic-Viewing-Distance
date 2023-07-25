@@ -1,1 +1,1 @@
-#include "\z\dvd\addons\common\script_component.hpp"
+#include "\z\dvd\addons\infantry\script_component.hpp"

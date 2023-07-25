@@ -1,4 +1,19 @@
-#include "script_component.hpp";
+#include "script_component.hpp"
+/*
+ * Author: Brostrom.A
+ * Handles aircraft
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return:
+ * Nothing
+ *
+ * Example:
+ * call FUNC(handle)
+ * call EFUNC(aircraft,handle)
+ * call dvd_aircraft_fnc_handle
+ */
 
 // Minmum values
 private _minDist    = EGVAR(MIN,DISTANCEVIEW);

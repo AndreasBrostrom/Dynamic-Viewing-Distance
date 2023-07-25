@@ -1,4 +1,19 @@
-#include "script_component.hpp";
+#include "script_component.hpp"
+/*
+ * Author: Brostrom.A
+ * Return viewing idstance numbers based on the terrain
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return:
+ * Viewing distance number
+ *
+ * Example:
+ * call FUNC(getCityTerrain)
+ * call EFUNC(common,getCityTerrain)
+ * call dvd_common_fnc_getCityTerrain
+ */
 
 private _trees = count nearestTerrainObjects [player, ["Tree"], 100];
 private _structures = count nearestObjects [player, ["house"], 100];

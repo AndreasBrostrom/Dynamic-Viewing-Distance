@@ -1,4 +1,19 @@
-#include "script_component.hpp";
+#include "script_component.hpp"
+/*
+ * Author: Brostrom.A
+ * Handles infantry
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return:
+ * Nothing
+ *
+ * Example:
+ * call FUNC(handle)
+ * call EFUNC(infantry,handle)
+ * call dvd_infantry_fnc_handle
+ */
 
 // Minmum values
 private _minDist    = EGVAR(MIN,DISTANCEVIEW);
@@ -41,7 +56,9 @@ if (_objDist < _minObjDist) then {_objDist = _minObjDist};
 if (_dist > _maxDist) then {_dist = _maxDist};
 if (_objDist > _maxObjDist) then {_objDist = _maxObjDist};
 
-hintSilent str ["Man", _dist, _objDist, [_bonusView, _penaltyView, _bonusView - _penaltyView]];
+if (EGVAR(common,debug)) then {
+    hintSilent str ["Man", _dist, _objDist, [_bonusView, ["CITY", _city, _forest, _troops], _penaltyView, _bonusView - _penaltyView]];
+};
 
 EGVAR(NEW,DISTANCEVIEW) = _dist;
 EGVAR(NEW,DISTANCEOBJECTS) = _objDist;

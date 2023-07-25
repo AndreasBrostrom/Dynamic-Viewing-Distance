@@ -1,0 +1,33 @@
+name = "Dynamic Viewing Distance System"
+prefix = "DVD"
+author = "Dynamic Viewing Distance System Mod Team"
+mainprefix = "z"
+
+[files]
+include = [
+    "mod.cpp",
+    "README*.md",  # Translated READMEs get moved to root in a hook (virtual file system)
+    "LICENSE",
+    "meta.cpp",
+]
+exclude = [
+    "*.psd",        # By default this list is empty
+]
+
+[version]
+path = "addons/main/script_version.hpp" # Default
+
+major = 0
+minor = 0
+patch = 0
+build = 0
+
+git_hash = 8 # Default: 8
+
+[hemtt.config]
+preset = "Hemtt"
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]

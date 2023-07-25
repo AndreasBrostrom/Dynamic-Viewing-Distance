@@ -1,8 +1,22 @@
-#include "script_component.hpp";
+#include "script_component.hpp"
+/*
+ * Author: Brostrom.A
+ * Return viewing idstance numbers based on the terrain
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return:
+ * Viewing distance number
+ *
+ * Example:
+ * call FUNC(getCityTerrain)
+ * call EFUNC(common,getCityTerrain)
+ * call dvd_common_fnc_getCityTerrain
+ */
 
 private _terrain = count nearestObjects [player, ["house"], 50];
 _terrain = round _terrain;
-
 
 private _return = switch (true) do {
     case (_terrain <= 10): {0};

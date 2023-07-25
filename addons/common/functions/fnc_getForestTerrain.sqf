@@ -1,5 +1,19 @@
-#include "script_component.hpp";
-
+#include "script_component.hpp"
+/*
+ * Author: Brostrom.A
+ * Return viewing idstance numbers based on the terrain
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return:
+ * Viewing distance number
+ *
+ * Example:
+ * call FUNC(getForestTerrain)
+ * call EFUNC(common,getForestTerrain)
+ * call dvd_common_fnc_getForestTerrain
+ */
 private _terrain = count nearestTerrainObjects [player, ["Tree"], 50];
 _terrain = round _terrain;
 
