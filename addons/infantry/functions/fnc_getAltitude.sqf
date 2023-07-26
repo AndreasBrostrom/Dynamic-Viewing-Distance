@@ -1,7 +1,23 @@
 #include "script_component.hpp";
+/*
+ * Author: Brostrom.A
+ * Handles infantry
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return:
+ * Nothing
+ *
+ * Example:
+ * call FUNC(getAltitude)
+ * call EFUNC(infantry,getAltitude)
+ * call dvd_infantry_fnc_getAltitude
+ */
 
-private _altitude = player call CBA_fnc_getPos;
+private _altitude = getPosATL player;
 _altitude = _altitude#2;
+_altitude = round _altitude;
 
 private _return = switch (true) do {
     case (_altitude <= 2): {0};
@@ -12,5 +28,10 @@ private _return = switch (true) do {
     case (_altitude > 10): {5000};
     default {0};
 };
+
+if (EGVAR(setting,debug)) then {
+    [format["Return: %1 (%2)", _return, _altitude], false, "INFO Altitude"] call FUNC(log);
+};
+
 
 _return

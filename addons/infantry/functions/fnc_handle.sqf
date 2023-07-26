@@ -42,7 +42,11 @@ private _forest = call EFUNC(common,getForestTerrain);
 // Units and battles
 private _troops = call EFUNC(common,getTroops);
 
-private _penaltyView = _city + _forest + _troops;
+// Frames (FPS)
+
+private _frames = call EFUNC(common,getFrameDistance);
+
+private _penaltyView = _city + _forest + _troops + _frames;
 
 
 private _dist = _bonusView - _penaltyView;
@@ -56,8 +60,13 @@ if (_objDist < _minObjDist) then {_objDist = _minObjDist};
 if (_dist > _maxDist) then {_dist = _maxDist};
 if (_objDist > _maxObjDist) then {_objDist = _maxObjDist};
 
-if (EGVAR(common,debug)) then {
-    hintSilent str ["Man", _dist, _objDist, [_bonusView, ["CITY", _city, _forest, _troops], _penaltyView, _bonusView - _penaltyView]];
+if (EGVAR(setting,debug)) then {
+    private _debugTextHeader = format ["MAN (FPS: %1)", round diag_fps];
+    private _debugTextDistance = format ["[dist: %1, objDist: %2]<br/>", _dist, _objDist];
+    private _debugTextBonusView = format ["BonusView: %1<br/>[ALTITUDE: %2, ZOOM: %3, CLEARING: %4]<br/>", _bonusView, _altitude, _zoom, _clearing];
+    private _debugTextPenaltyView = format ["PenaltyView: %1 <br/>[CITY: %2, FOREST: %3, TROOPS: %4, FPS: %5]<br/>", _penaltyView, _city, _forest, _troops, _frames];
+    private _debugMessage = [_debugTextHeader, _debugTextDistance, _debugTextBonusView, _debugTextPenaltyView] joinString "<br/>";
+    hintSilent parseText _debugMessage;
 };
 
 EGVAR(NEW,DISTANCEVIEW) = _dist;

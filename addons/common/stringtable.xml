@@ -3,8 +3,25 @@
         <Key ID="STR_DVD_Common_Category">
             <English>Dynamic Viewing Distance</English>
         </Key>
-        <Key ID="STR_DVD_Common_DebugMode">
+        <!-- Sub Category -->
+        <Key ID="STR_DVD_Common_Development">
+            <English>Development</English>
+        </Key>
+        <Key ID="STR_DVD_Common_Performence">
+            <English>Performence</English>
+        </Key>
+
+        <Key ID="STR_DVD_Common_Debug">
             <English>Debug mode</English>
+        </Key>
+        <Key ID="STR_DVD_Common_Debug_Desc">
+            <English>Debug mode...</English>
+        </Key>
+        <Key ID="STR_DVD_Common_FPS">
+            <English>FPS</English>
+        </Key>
+        <Key ID="STR_DVD_Common_FPS_Desc">
+            <English>FPS...</English>
         </Key>
     </Package>
 </Project>
